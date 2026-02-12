@@ -50,8 +50,8 @@ public class MyButtonOnClickListener implements View.OnClickListener {
     public void onClick(View v) {
         // Confirmación antes de borrar
         new AlertDialog.Builder(context)
-                .setTitle("¿Borrar palabra? 🗑")
-                .setMessage("Vas a borrar: \"" + word + "\"\n\n¿Seguro? ")
+                .setTitle("¿Borrar palabra?")
+                .setMessage("Vas a borrar: \"" + word )
                 .setPositiveButton("Sí, borrar", (dialog, which) -> {
                     db.delete(id);
                     adapter.notifyDataSetChanged(); // refresca RecyclerView

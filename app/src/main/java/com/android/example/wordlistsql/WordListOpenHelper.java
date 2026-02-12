@@ -106,7 +106,7 @@ public class WordListOpenHelper extends SQLiteOpenHelper {
             }
 
         } catch (Exception e) {
-            Log.d(TAG, "QUERY EXCEPTION! " + e.getMessage());
+            Log.d(TAG, "QUERY EXCEPTION " + e.getMessage());
         } finally {
             if (cursor != null) cursor.close();
         }
@@ -129,7 +129,7 @@ public class WordListOpenHelper extends SQLiteOpenHelper {
             newId = mWritableDB.insert(WORD_LIST_TABLE, null, values);
 
         } catch (Exception e) {
-            Log.d(TAG, "INSERT EXCEPTION! " + e.getMessage());
+            Log.d(TAG, "INSERT EXCEPTION " + e.getMessage());
         }
 
         return newId;
@@ -143,7 +143,7 @@ public class WordListOpenHelper extends SQLiteOpenHelper {
             }
             return DatabaseUtils.queryNumEntries(mReadableDB, WORD_LIST_TABLE);
         } catch (Exception e) {
-            Log.d(TAG, "COUNT EXCEPTION! " + e.getMessage());
+            Log.d(TAG, "COUNT EXCEPTION " + e.getMessage());
             return 0;
         }
     }
@@ -164,7 +164,7 @@ public class WordListOpenHelper extends SQLiteOpenHelper {
             );
 
         } catch (Exception e) {
-            Log.d(TAG, "DELETE EXCEPTION! " + e.getMessage());
+            Log.d(TAG, "DELETE EXCEPTION " + e.getMessage());
         }
 
         return deleted;
@@ -190,7 +190,7 @@ public class WordListOpenHelper extends SQLiteOpenHelper {
             );
 
         } catch (Exception e) {
-            Log.d(TAG, "UPDATE EXCEPTION! " + e.getMessage());
+            Log.d(TAG, "UPDATE EXCEPTION " + e.getMessage());
         }
 
         return rowsUpdated;
@@ -225,7 +225,7 @@ public class WordListOpenHelper extends SQLiteOpenHelper {
             );
 
         } catch (Exception e) {
-            Log.d(TAG, "SEARCH EXCEPTION! " + e.getMessage());
+            Log.d(TAG, "SEARCH EXCEPTION " + e.getMessage());
         }
 
         return cursor;

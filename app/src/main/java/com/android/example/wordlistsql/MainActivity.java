@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 mAdapter.notifyDataSetChanged();
 
             } else {
-                Toast.makeText(this, "No se guardó: está vacío 😅", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "No se puede guardar, está vacío", Toast.LENGTH_LONG).show();
             }
         }
     }

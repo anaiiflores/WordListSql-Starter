@@ -31,7 +31,7 @@ public class SearchActivity extends AppCompatActivity {
     public void showResult(View view) {
         String word = mEditWordView.getText().toString();
 
-        mTextView.setText("Result for: " + word + "\n\n");
+        mTextView.setText( word );
 
         Cursor cursor = mDB.search(word);
 
@@ -47,7 +47,7 @@ public class SearchActivity extends AppCompatActivity {
 
             cursor.close();
         } else {
-            mTextView.append("No results 😅");
+            mTextView.append("No existen resultados");
         }
     }
 }
